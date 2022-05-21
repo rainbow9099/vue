@@ -5,20 +5,36 @@
         <img src="../assets/logo.png" alt="" />
       </div>
       <div class="login_panel">
-        <el-form @keydown.enter.native="submitLogin('ruleForm')" :model="user" :rules="rules" ref="ruleForm" class="demo-form-inline">
+        <el-form
+          @keydown.enter.native="submitLogin('ruleForm')"
+          :model="user"
+          :rules="rules"
+          ref="ruleForm"
+          class="demo-form-inline"
+        >
           <el-form-item label="账号" label-width="60px" prop="username">
             <el-input
-            v-model="user.username" ref="nameRef"
-            prefix-icon="el-icon-user" placeholder="账号"></el-input>
+              size="middle"
+              v-model="user.username"
+              ref="nameRef"
+              prefix-icon="el-icon-user"
+              placeholder="账号"
+            ></el-input>
           </el-form-item>
           <el-form-item label="密码" label-width="60px" prop="password">
             <el-input
-            v-model="user.password"
-             prefix-icon="el-icon-lock" type="password"  placeholder="密码"></el-input>
+              size="middle"
+              v-model="user.password"
+              prefix-icon="el-icon-lock"
+              type="password"
+              placeholder="密码"
+            ></el-input>
           </el-form-item>
-          <el-form-item class="btns" >
-            <el-button type="primary" @click="submitLogin('ruleForm')">登录</el-button>
-            <el-button type="info" @click="reset('ruleForm')">重置</el-button>
+          <el-form-item class="btns">
+            <el-button size="middle" type="primary" @click="submitLogin('ruleForm')"
+              >登录</el-button
+            >
+            <el-button size="middle" type="info" @click="reset('ruleForm')">重置</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -39,9 +55,7 @@ export default {
         username: [
           { required: true, message: '请输入用户名账号', trigger: 'blur' }
         ],
-        password: [
-          { required: true, message: '请输入密码', trigger: 'blur' }
-        ]
+        password: [{ required: true, message: '请输入密码', trigger: 'blur' }]
       }
     }
   },
@@ -50,7 +64,7 @@ export default {
   },
   methods: {
     submitLogin (formName) {
-      this.$refs[formName].validate(async valid => {
+      this.$refs[formName].validate(async (valid) => {
         if (valid) {
           const { data: res } = await this.$http.post('login', this.user)
           console.log(res)
@@ -109,7 +123,7 @@ export default {
     }
   }
 }
-.login_panel{
+.login_panel {
   margin-top: 70px;
   padding: 0 10px;
 }

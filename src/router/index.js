@@ -7,7 +7,15 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/', redirect: '/login' },
   { path: '/login', component: LoginComp },
-  { path: '/home', component: HomeComp }
+  {
+    path: '/home',
+    component: HomeComp,
+    redirect: '/welcome',
+    children: [
+      { path: '/welcome', component: () => import('../components/WelcomeComp.vue') },
+      { path: '/users', component: () => import('../components/user/UserList.vue') }
+    ]
+  }
 ]
 
 const router = new VueRouter({
