@@ -228,11 +228,9 @@ export default {
       this.editCateDialog = true
     },
     clearAddCate () {
-      this.addCateForm = {
-        cat_name: '',
-        cat_pid: 0,
-        cat_level: 0
-      }
+      this.$refs.addCateRef.resetFields()
+      this.addCateForm.cat_pid = 0
+      this.addCateForm.cat_level = 0
       this.selectedKeys = []
     },
     addCate () {
