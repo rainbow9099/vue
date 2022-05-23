@@ -208,10 +208,8 @@ export default {
     editCate () {
       this.$refs.editCateRef.validate(async (valid) => {
         if (!valid) return
-        const { id } = this.editCateForm
-        const { data: res } = await this.$http.put('categories/' + id, {
-          cat_name: this.editCateForm.cat_name
-        })
+        const { id, cat_name } = this.editCateForm
+        const { data: res } = await this.$http.put('categories/' + id, { cat_name })
         if (res.meta.status !== 200) {
           return this.$message.error(res.meta.msg || '修改分类失败')
         }
