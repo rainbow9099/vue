@@ -17,7 +17,9 @@ const routes = [
       { path: '/rights', component: () => import('../components/power/RightsComp.vue') },
       { path: '/roles', component: () => import('../components/power/RolesComp.vue') },
       { path: '/categories', component: () => import('../components/goods/CateComp.vue') },
-      { path: '/params', component: () => import('../components/goods/ParamsComp.vue') }
+      { path: '/params', component: () => import('../components/goods/ParamsComp.vue') },
+      { path: '/goods', component: () => import('../components/goods/GoodsList.vue') },
+      { path: '/goods/add', component: () => import('../components/goods/AddGoods.vue') }
     ]
   }
 ]

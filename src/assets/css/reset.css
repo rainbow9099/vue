@@ -22,3 +22,9 @@ html, body, #app {
 .el-cascader-panel{
     height: 200px !important;
 }
+.el-step__title{
+    font-size: 13px !important;
+}
+.ql-editor{
+    min-height: 300px;
+}
