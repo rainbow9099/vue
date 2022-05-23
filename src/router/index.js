@@ -19,7 +19,8 @@ const routes = [
       { path: '/categories', component: () => import('../components/goods/CateComp.vue') },
       { path: '/params', component: () => import('../components/goods/ParamsComp.vue') },
       { path: '/goods', component: () => import('../components/goods/GoodsList.vue') },
-      { path: '/goods/add', component: () => import('../components/goods/AddGoods.vue') }
+      { path: '/goods/add', component: () => import('../components/goods/AddGoods.vue') },
+      { path: '/orders', component: () => import('../components/order/OrderList.vue') }
     ]
   }
 ]
