@@ -15,10 +15,6 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
+### 项目优化之后，![输入图片说明](aboutimage.png)
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
