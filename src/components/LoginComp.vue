@@ -67,7 +67,6 @@ export default {
       this.$refs[formName].validate(async (valid) => {
         if (valid) {
           const { data: res } = await this.$http.post('login', this.user)
-          console.log(res)
           if (res.meta.status !== 200) {
             this.$message.error('登录失败')
             return
@@ -76,7 +75,6 @@ export default {
           sessionStorage.setItem('token', res.data.token)
           this.$router.replace('/home')
         } else {
-          console.log('error')
           return false
         }
       })

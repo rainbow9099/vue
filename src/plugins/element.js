@@ -40,6 +40,7 @@ import {
   Timeline,
   TimelineItem
 } from 'element-ui'
+// 在main.js中设置
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 }
 Vue.use(Button)
 Vue.use(Form)
