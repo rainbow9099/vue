@@ -23,7 +23,8 @@ npm run build
 ![输入图片说明](aboutimage6.png)
 ![输入图片说明](aboutimage7.png)
 ![输入图片说明](aboutimage8.png)
-### 项目优化之后，首页加载快了不少![输入图片说明](aboutimage.png)
+### 项目优化之后，首页加载快了不少
+![输入图片说明](image%E4%BC%98%E5%8C%96.png)
 ![输入图片说明](aboutimage.png)
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
